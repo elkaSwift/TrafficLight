@@ -16,16 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhq-pW-oRN">
-                                <rect key="frame" x="97" y="755" width="196" height="45"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="XDY-mh-uih"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="START"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="U8s-YL-cio">
                                 <rect key="frame" x="115" y="94" width="160" height="520"/>
                                 <subviews>
@@ -43,23 +33,42 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhq-pW-oRN">
+                                <rect key="frame" x="75" y="755" width="240" height="45"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="XDY-mh-uih"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START"/>
+                                <connections>
+                                    <action selector="startPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="3KB-8E-scd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dhq-pW-oRN" secondAttribute="bottom" constant="10" id="1Ug-qO-PJd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U8s-YL-cio" secondAttribute="trailing" constant="115" id="Bpk-TP-dee"/>
-                            <constraint firstItem="dhq-pW-oRN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dj8-Vh-ACk"/>
+                            <constraint firstItem="dhq-pW-oRN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="EFL-Wn-qPe"/>
+                            <constraint firstItem="dhq-pW-oRN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U7d-wV-lcD"/>
                             <constraint firstItem="U8s-YL-cio" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="WSb-tY-8y6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U8s-YL-cio" secondAttribute="bottom" constant="196" id="XDC-Pe-o3r"/>
                             <constraint firstItem="U8s-YL-cio" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="XRr-jX-Zmt"/>
-                            <constraint firstItem="dhq-pW-oRN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="bO8-7d-eR2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dhq-pW-oRN" secondAttribute="bottom" constant="10" id="fxw-Qp-peX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="Nao-04-BUc" id="e62-eP-drB"/>
+                        <outlet property="redView" destination="Gc0-e4-csv" id="PLa-4O-kae"/>
+                        <outlet property="startButton" destination="dhq-pW-oRN" id="NWt-UO-tIw"/>
+                        <outlet property="yellowView" destination="w2i-J8-0Uq" id="Q29-6Z-LYW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.73913043478262" y="109.82142857142857"/>
+            <point key="canvasLocation" x="121.53846153846153" y="109.47867298578198"/>
         </scene>
     </scenes>
     <resources>
